@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PoseNet example using p5.js</title>
+
+    <script type="text/javascript" src="https://p5livemedia.itp.io/simplepeer.min.js"></script>
+    <script type="text/javascript" src="https://p5livemedia.itp.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="https://p5livemedia.itp.io/p5livemedia.js"></script>
+    <script src="edfdecoder.umd.min.js"></script>
+    <script
+      src="https://unpkg.com/ml5@latest/dist/ml5.min.js"
+      type="text/javascript"></script>
+  </head>
+
+  <body>
+    <h1>Multimodal Signals Stream - Receiver</h1>
+    <p>This demo uses three different signals:</p>
+    <ul>
+        <li>The position of your nose (captured by your webcam)</li>
+        <li>The volume of your voice (captured by your microphone)</li>
+        <li>A recording of a Emotiv session (EDF file)</li>
+    </ul>
+    <p>The nose position controls the amount of purple flares.
+        The volume of the voice controls the central green halo.
+        The background changes to the values of the measurements in the channel 0 of the EEG.</p>
+   
+        <p id="nose"><b>Nose potition</b>: initilizating</p>
+        <p id="volume"><b>Volume</b>: initilizating</p>
+        <p id="power"><b>Chanel 0 Amplitude</b>: initilizating</p>
+    <script src="sketch_receiver.js"></script>
+
+    
+  </body>
+</html>
